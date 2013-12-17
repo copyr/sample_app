@@ -1,12 +1,13 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.8'
+gem 'bootstrap-sass', '3.0.3.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development, :test do
-	gem 'sqlite3'
+	gem 'sqlite3', '1.3.8'
   gem 'rspec-rails', '2.10.1'
 end
 
@@ -15,7 +16,7 @@ end
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+  gem 'coffee-rails', '~> 3.2.2'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
@@ -23,7 +24,7 @@ group :assets do
   gem 'uglifier', '2.3.3'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '3.0.4'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -39,6 +40,12 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+group :test do
+  gem 'capybara', '2.2.0'
+	gem 'rb-inotify', '0.9.3'
+	gem 'libnotify', '0.8.2'
+end
+
 group :production do
-	gem 'pg', '0.17.0'
+  gem 'pg', '0.17.0'
 end
